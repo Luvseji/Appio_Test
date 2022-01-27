@@ -25,24 +25,75 @@
                                     <constraint firstAttribute="height" constant="100" id="XbD-H9-AjT"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeTitle" translatesAutoresizingMaskIntoConstraints="NO" id="VVY-hF-KZO">
+                                <rect key="frame" x="73" y="293.5" width="268" height="40"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="4ot-ee-fzc">
+                                <rect key="frame" x="75.5" y="375.5" width="263" height="217"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBk-fI-gxy">
+                                <rect key="frame" x="35" y="781.5" width="344" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="02a-qs-zXc"/>
+                                    <constraint firstAttribute="height" constant="50" id="0SH-mA-MUT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="02a-qs-zXc"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="02a-qs-zXc"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="startButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lo9-lc-Iad"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="VVY-hF-KZO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="291-Ia-QfY"/>
+                            <constraint firstItem="VVY-hF-KZO" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.0488998" id="Aki-XK-q1n"/>
+                            <constraint firstItem="4ot-ee-fzc" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.635514" id="CyR-ar-IFc"/>
+                            <constraint firstItem="lBk-fI-gxy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.8" id="JRD-mu-NG3"/>
+                            <constraint firstItem="VVY-hF-KZO" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.647343" id="XUX-m6-MKG"/>
+                            <constraint firstItem="lBk-fI-gxy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="XaI-un-57p"/>
                             <constraint firstItem="GLr-iC-L8T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="c3A-8J-iRt"/>
+                            <constraint firstItem="VVY-hF-KZO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="cuW-iT-G7b"/>
+                            <constraint firstItem="lBk-fI-gxy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fFR-cW-px6"/>
+                            <constraint firstItem="4ot-ee-fzc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fdz-Xo-y6i"/>
+                            <constraint firstItem="4ot-ee-fzc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.08" id="nbl-cT-tsa"/>
                             <constraint firstItem="GLr-iC-L8T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vcm-KP-y1b"/>
+                            <constraint firstItem="4ot-ee-fzc" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.26533" id="x6T-RE-h71"/>
                         </constraints>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="XaI-un-57p"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="loaderView" destination="GLr-iC-L8T" id="7Iv-Su-uVO"/>
+                        <outlet property="logoImage" destination="4ot-ee-fzc" id="cRl-ez-tug"/>
+                        <outlet property="startButton" destination="lBk-fI-gxy" id="J6J-6n-mix"/>
+                        <outlet property="titleImage" destination="VVY-hF-KZO" id="wcI-HD-K6S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="98"/>
+            <point key="canvasLocation" x="128.98550724637681" y="97.767857142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="welcomeLogo" width="272" height="225"/>
+        <image name="welcomeTitle" width="268" height="40"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
