@@ -1,0 +1,23 @@
+/* 
+  localization.strings
+  APPIO_Test
+
+  Created by Константин Машейченко on 28.01.2022.
+  
+*/
+
+"welcomeButton" = "Start";
+
+"booksListTitle" = "Books list";
+"emptyTitle" = "Empty list";
+"outDate" = "Overdue books";
+
+"sortName" = "Sort by name";
+"sortDate" = "Sort by date";
+
+"addBookTitle" = "Add new book";
+"addBookTitleEdit" = "Edit book";
+"addBookPlaceHolder" = "Book name";
+"addBookButton" = "Add";
+"addBookButtonEdit" = "Edit";
+

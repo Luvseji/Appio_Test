@@ -9,22 +9,22 @@ import UIKit
 
 class LoaderView: UIView {
     
-    let outterSize = 100.0
-    let outterBackground = CAGradientLayer()
+    private let outterSize = 100.0
+    private let outterBackground = CAGradientLayer()
     private lazy var outterView: UIView = {
         let color = #colorLiteral(red: 0.3882352941, green: 0.5843137255, blue: 1, alpha: 1)
         return createLoaderSubview(backgroundColor: color,
                                    borderWidth: 1)
     }()
     
-    let innerSize = 70.0
-    let innerBorder = CAGradientLayer()
+    private let innerSize = 70.0
+    private let innerBorder = CAGradientLayer()
     private lazy var innerView: UIView = {
         return createLoaderSubview(backgroundColor: UIColor.white,
                                    borderWidth: 1)
     }()
     
-    let pointSize = 13.5
+    private let pointSize = 13.5
     private lazy var pointView: UIView = {
         return createLoaderSubview(backgroundColor: UIColor.black,
                                    borderWidth: 0.5)
@@ -63,6 +63,8 @@ class LoaderView: UIView {
     }
     
 }
+
+// MARK: - Animation
 
 private extension LoaderView {
     
@@ -133,6 +135,11 @@ private extension LoaderView {
         animation.duration = 1
         pointView.layer.add(animation, forKey: "circleAnimation")
     }
+}
+
+// MARK: - Visual
+    
+private extension LoaderView {
     
     func setGradientBorder(for view: UIView) {
         innerBorder.frame =  CGRect(origin: CGPoint.zero, size: view.frame.size)
@@ -169,6 +176,11 @@ private extension LoaderView {
         outterBackground.cornerRadius = view.frame.width / 2
         view.layer.addSublayer(outterBackground)
     }
+}
+
+// MARK: - Settings
+
+private extension LoaderView {
     
     func getPoint(for angle: Int) -> CGPoint {
         let radius = Double(outterView.frame.width / 2)
